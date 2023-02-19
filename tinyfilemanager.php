@@ -1784,7 +1784,7 @@ if (isset($_GET['view'])) {
                     if (empty($ext) || in_array(strtolower($file), fm_get_text_names()) || preg_match('#\.min\.(css|js)$#i', $file)) {
                         $hljs_class = 'nohighlight';
                     }
-                    $content = '<pre class="with-hljs"><code class="' . $hljs_class . '">' . fm_enc($content) . '</code></pre>';
+                    $content = '<pre class="with-hljs"><code style="word-break:break-all;white-space:normal;height:300px;" class="' . $hljs_class . '">' . fm_enc($content) . '</code></pre>';
                 } elseif (in_array($ext, array('php', 'php4', 'php5', 'phtml', 'phps'))) {
                     // php highlight
                     $content = highlight_string($content, true);
